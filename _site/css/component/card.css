@@ -1,0 +1,27 @@
+/*
+ * ==========================================================================
+ * # Components
+ * ==========================================================================
+ */
+
+/* Component Styles for Showcase */
+
+.card-component {
+	background: var(--base-hue-light);
+	border: var(--border-width) solid var(--hue-neutral-10);
+	border-radius: var(--space-min); /* Use a spacing variable */
+	box-shadow: var(--shadow-md); /* Use a shadow variable from your theme */
+	overflow: hidden;
+	transition: all 0.3s ease;
+}
+.card-component:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 15px rgba(0,0,0,0.08);
+}
+.card-component img {
+	display: block;
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	object-fit: cover;
+}
+

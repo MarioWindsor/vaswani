@@ -1,0 +1,339 @@
+/*
+ * ==========================================================================
+ * # THEME STYLESCAPE
+ * ==========================================================================
+ */
+
+
+
+/*
+ * Breakpoints
+ 
+@media( min-width: 500px )  {}
+@media( min-width: 1000px ) {}
+@media( min-width: 1500px ) {}
+ 
+ */
+
+
+
+
+
+/* -- html -- */ 
+html {
+	scroll-behavior: smooth; /* CSS to apply easing effect */
+	scroll-behavior: cubic-bezier(0.42, 0, 0.58, 1); /* Custom cubic-bezier easing */
+}
+
+
+
+/* -- body -- */
+
+body, .body {
+	font-family: "Poppins", Arial, sans-serif;
+}
+
+
+
+
+
+/*
+ * ==========================================================================
+ * Typography Helpers
+ * ==========================================================================
+ */
+
+
+
+/*
+ * Font Size
+ * Applies the fluid font size variables from 0-root.css to any element.
+ */
+
+.h1 { font-size: var(--h1); }
+.h2 { font-size: var(--h2); }
+.h3 { font-size: var(--h3); }
+.h4 { font-size: var(--h4); }
+.h5 { font-size: var(--h5); }
+.h6 { font-size: var(--h6); }
+.p  { font-size: var(--p); }
+.label { font-size: var(--label); }
+.small { font-size: var(--small); }
+
+
+
+/*
+ * Font Weight
+ * Controls the boldness of text.
+ */
+
+.w-100 { font-weight: 100; }
+.w-200 { font-weight: 200; }
+.w-300 { font-weight: 300; }
+.w-400 { font-weight: 400; }
+.w-600 { font-weight: 600; }
+.strong,
+.w-700 { font-weight: 700; }
+.w-800 { font-weight: 800; }
+.w-900 { font-weight: 900; }
+
+
+
+/*
+ * Font Style
+ */
+
+.em { font-style: italic; }
+
+
+
+/*
+ * Line Height
+ * Controls the vertical space between lines of text.
+ */
+
+.line-height-tight { line-height: 1.25; }
+.line-height-normal { line-height: 1.5; }
+.line-height-loose { line-height: 1.75; }
+
+.line-height-tight-tight { line-height: 1; }
+.line-height-loose-loose { line-height: 2; }
+
+
+
+/*
+ * Letter Spacing
+ * Controls the horizontal space between characters.
+ */
+
+.letter-spacing-normal { letter-spacing: normal; }
+.letter-spacing-tight { letter-spacing: -0.1rem; }
+.letter-spacing-loose { letter-spacing: 0.1rem; }
+
+.letter-spacing-tight-tight { letter-spacing: -0.2rem; }
+.letter-spacing-loose-loose { letter-spacing: 0.2rem; }
+
+
+
+
+
+/*
+ * ==========================================================================
+ * Color & Fill Helpers
+ * ==========================================================================
+ */
+
+
+
+/*
+ * Text Color Utilities
+ * Applies a specific theme color to the text.
+ */
+
+.text-light { color: var(--hue-background); }
+.text-dark { color: var(--hue-foreground); }
+.text-highlight { color: var(--hue-highlight); }
+.text-error { color: var(--hue-error); }
+.text-success { color: var(--hue-success); }
+.text-warning { color: var(--hue-warning); }
+.text-neutral-10 { color: var(--hue-neutral-10); }
+.text-neutral-20 { color: var(--hue-neutral-20); }
+.text-neutral-30 { color: var(--hue-neutral-30); }
+.text-neutral-40 { color: var(--hue-neutral-40); }
+.text-neutral-50 { color: var(--hue-neutral-50); }
+.text-neutral-60 { color: var(--hue-neutral-60); }
+.text-neutral-70 { color: var(--hue-neutral-70); }
+.text-neutral-80 { color: var(--hue-neutral-80); }
+.text-neutral-90 { color: var(--hue-neutral-90); }
+
+
+
+/*
+ * Background Fill Utilities
+ * Applies a background color and automatically sets a contrasting text color.
+ */
+
+/* Light Backgrounds, Dark Text */
+.fill-light { 
+	background-color: var(--hue-background);
+	color: var(--hue-foreground);
+}
+.fill-neutral-10 {
+	background-color: var(--hue-neutral-10);
+	color: var(--hue-foreground);
+}
+.fill-neutral-20 {
+	background-color: var(--hue-neutral-20);
+	color: var(--hue-foreground);
+}
+.fill-neutral-30 {
+	background-color: var(--hue-neutral-30);
+	color: var(--hue-foreground);
+}
+.fill-warning {
+	background-color: var(--hue-warning);
+	color: var(--hue-foreground);
+}
+
+/* Dark Backgrounds, Light Text */
+.fill-dark {
+	background-color: var(--hue-foreground);
+	color: var(--hue-background);
+}
+.fill-highlight {
+	background-color: var(--hue-highlight);
+	color: var(--hue-background);
+}
+.fill-neutral-40 {
+	background-color: var(--hue-neutral-40);
+	color: var(--hue-background);
+}
+.fill-neutral-50 {
+	background-color: var(--hue-neutral-50);
+	color: var(--hue-background);
+}
+.fill-neutral-60 {
+	background-color: var(--hue-neutral-60);
+	color: var(--hue-background);
+}
+.fill-neutral-70 {
+	background-color: var(--hue-neutral-70);
+	color: var(--hue-background);
+}
+.fill-neutral-80 {
+	background-color: var(--hue-neutral-80);
+	color: var(--hue-background);
+}
+.fill-neutral-90 {
+	background-color: var(--hue-neutral-90);
+	color: var(--hue-background);
+}
+.fill-error {
+	background-color: var(--hue-error);
+	color: var(--hue-background);
+}
+.fill-success {
+	background-color: var(--hue-success);
+	color: var(--hue-background);
+}
+
+
+
+
+
+
+/*
+ * ==========================================================================
+ * Border & Shadow Helpers
+ * ==========================================================================
+ */
+
+
+
+/*
+ * Border Radius
+ * Applies rounded corners using the fluid spacing variables.
+ */
+
+.radius-min { border-radius: var(--space-min); }
+.radius-25 { border-radius: var(--space-25); }
+.radius-50 { border-radius: var(--space-50); }
+.radius-round { border-radius: 9999px; } /* For creating circles/pills */
+
+
+
+
+/*
+ * Box Shadow
+ * Applies pre-defined, theme-aware shadow styles.
+ * Shadow dimensions are proportional to the base paragraph font size (--p).
+ */
+
+.box-shadow-sm {
+	box-shadow:
+		0 calc(var(--p) * 0.07) calc(var(--p) * 0.14) 0 color-mix(in srgb, var(--base-hue-dark) 8%, transparent),
+		0 calc(var(--p) * 0.07) calc(var(--p) * 0.07) 0 color-mix(in srgb, var(--base-hue-dark) 6%, transparent);
+}
+
+.box-shadow, .box-shadow-md {
+	box-shadow:
+		0 calc(var(--p) * 0.28) calc(var(--p) * 0.43) calc(var(--p) * -0.07) color-mix(in srgb, var(--base-hue-dark) 8%, transparent),
+		0 calc(var(--p) * 0.14) calc(var(--p) * 0.28) calc(var(--p) * -0.14) color-mix(in srgb, var(--base-hue-dark) 6%, transparent);
+}
+
+.box-shadow-lg {
+	box-shadow:
+		0 calc(var(--p) * 0.7) calc(var(--p) * 1.05) calc(var(--p) * -0.2) color-mix(in srgb, var(--base-hue-dark) 8%, transparent),
+		0 calc(var(--p) * 0.28) calc(var(--p) * 0.43) calc(var(--p) * -0.28) color-mix(in srgb, var(--base-hue-dark) 5%, transparent);
+}
+
+.box-shadow-highlight {
+	box-shadow: 0 0 calc(var(--p) * 0.85) calc(var(--p) * 0.28) color-mix(in srgb, var(--hue-highlight) 20%, transparent);
+}
+
+
+
+/*
+ * Box Border (using box-shadow)
+ * A clever way to add an inset border without affecting layout.
+ */
+
+.box-border-dark {
+	box-shadow: inset 0 0 0 var(--border-width) var(--hue-foreground);
+}
+.box-border-light {
+	box-shadow: inset 0 0 0 var(--border-width) var(--hue-background);
+}
+.box-border-highlight {
+	box-shadow: inset 0 0 0 var(--border-width) var(--hue-highlight);
+}
+
+
+
+/*
+ * ==========================================================================
+ * Animation Helpers
+ * ==========================================================================
+ */
+
+/*
+ * Scroll-Triggered Animations
+ * These animations activate when an element enters the viewport.
+ * Uses modern CSS @supports to only apply to browsers that support
+ * `animation-timeline: view()`.
+ */
+
+@supports (animation-timeline: view()) {
+
+	/* --- Fade Up Animation --- */
+	.fade-up-animation {
+		scale: 0.9;
+		opacity: 0;
+		animation: fade-up linear forwards;
+		animation-timeline: view();
+		animation-range: entry 10% cover 40%;
+	}
+
+	@keyframes fade-up {
+		to {
+			scale: 1;
+			opacity: 1;
+		}
+	}
+
+	/* --- Slide In From Left Animation --- */
+	.slide-in-left-animation {
+		translate: -50px 0;
+		opacity: 0;
+		animation: slide-in-left linear forwards;
+		animation-timeline: view();
+		animation-range: entry 10% cover 40%;
+	}
+
+	@keyframes slide-in-left {
+		to {
+			translate: 0 0;
+			opacity: 1;
+		}
+	}
+}

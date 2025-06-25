@@ -1,0 +1,130 @@
+/*
+ * ==========================================================================
+ * Root : Global Variable & Theme Engine
+ * ==========================================================================
+ */
+
+
+:root {
+
+	/*
+	 * COLORS
+	 */
+
+	/* -- Base Color -- */
+
+	--base-hue-light: #FFFFFF;
+	--base-hue-dark: #000712;
+	--base-hue-blue: #0175FF;
+
+	/* -- Theme Color -- */
+
+	--hue-background: var(--base-hue-light);
+	--hue-foreground: var(--base-hue-dark);
+
+	--hue-highlight: var(--base-hue-blue);
+
+	--hue-neutral-10: #E6E6E7;
+	--hue-neutral-20: #CCCDD0;
+	--hue-neutral-30: #B3B5B8;
+	--hue-neutral-40: #999CA0;
+	--hue-neutral-50: #808389;
+	--hue-neutral-60: #666A71;
+	--hue-neutral-70: #4D5159;
+	--hue-neutral-80: #333941;
+	--hue-neutral-90: #1A202A;
+
+	--hue-error: red;
+	--hue-warning: orange;
+	--hue-success: limegreen;
+
+
+
+	/*
+	 * SIZE & SPACE
+	 */
+
+	/* -- Core Layout Unit -- */
+	
+	--column-unit: calc(100vw / 14); /* A single column is 1/14th of the viewport width */
+	--container-width: calc(var(--column-unit) * 12);
+
+	/*	Responsive '--card' Per 100% Container
+		======================================
+		Small	: 1 Card (12 col)
+		Medium	: 2 Cards (6 col)
+		large	: 3 Cards (4 col)
+		Xlarge	: 4 Cards (3 col)
+		======================================
+	 */
+	--card: var(--container-width); 
+
+	/* -- Spacing System -- */
+
+	--space-100: var(--column-unit); 
+
+	/* Fractional sizes */
+	
+	/* minimum 1/8th unit with a 4px minimum size */
+	--space-min: clamp(4px, calc(var(--space-100) / 8), 10px); 
+	
+	--space-25: calc(var(--space-100) / 4);		/* 25% of a column */
+	--space-50: calc(var(--space-100) / 2);		/* 50% of a column */
+	--space-75: calc(var(--space-100) * 0.75);	/* 75% of a column */
+
+	/* Multiplied sizes */
+	--space-125: calc(var(--space-100) * 1.25);	/* 125% of a column */
+	--space-150: calc(var(--space-100) * 1.5);	/* 150% of a column */
+	--space-175: calc(var(--space-100) * 1.75);	/* 175% of a column */
+	--space-200: calc(var(--space-100) * 2);	/* 200% of a column */
+	--space-250: calc(var(--space-100) * 2.5);	/* 250% of a column */
+	--space-300: calc(var(--space-100) * 3);	/* 300% of a column */
+	--space-400: calc(var(--space-100) * 4);	/* 400% of a column */
+
+
+
+	/* -- TYPE SCALE -- */
+
+	--card-font-factor: 30; 
+	--font-unit: calc(var(--card) / var(--card-font-factor));
+
+	--font-scale: 1.2; /* The base ratio for our type scale */
+
+	--h1: calc(pow(var(--font-scale), 7) * var(--font-unit));
+	--h2: calc(pow(var(--font-scale), 6) * var(--font-unit));
+	--h3: calc(pow(var(--font-scale), 5) * var(--font-unit));
+	--h4: calc(pow(var(--font-scale), 4) * var(--font-unit));
+	--h5: calc(pow(var(--font-scale), 3) * var(--font-unit));
+	--h6: calc(pow(var(--font-scale), 2) * var(--font-unit));
+	--p:  calc(pow(var(--font-scale), 1) * var(--font-unit));
+	--label: calc(pow(var(--font-scale), 0.75) * var(--font-unit));
+	--small: calc(pow(var(--font-scale), 0.5) * var(--font-unit));
+
+
+
+	/*
+	 * BORDER WIDTH
+	 * A fluid border that scales with the card size,
+	 * but is clamped between 1px and 3px.
+	 */
+	--border-width: calc(var(--p) * 0.1);
+}
+
+@media( min-width: 500px ) {
+	:root {
+		--card: calc(var(--container-width) / 2);
+	}
+}
+
+@media( min-width: 1000px ) {
+	:root {
+		--card: calc(var(--container-width) / 3);
+	}
+}
+
+@media( min-width: 1500px ) {
+	:root {
+		--card: calc(var(--container-width) / 4);
+	}
+}
+
