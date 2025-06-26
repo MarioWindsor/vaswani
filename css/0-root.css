@@ -61,7 +61,7 @@
 
 	/* -- Spacing System -- */
 
-	--space-100: var(--column-unit); 
+	--space-100: calc(var(--card)/6);
 
 	/* Fractional sizes */
 	
