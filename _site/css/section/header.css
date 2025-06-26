@@ -16,8 +16,8 @@
 
 	cursor: pointer;
 	position: fixed;
-	top: var(--space-100);
-	right: var(--space-100);
+	top: var(--space-50);
+	right: var(--space-50);
 	z-index: 1001;
 	width: var(--space-100);
 	height: var(--space-100);
@@ -59,15 +59,17 @@
 	--transition-speed: 0.3s;
 	--transition-ease: cubic-bezier(0.42, 0, 0.58, 1);
 
-	color: var(--hue-neutral-50);
-	text-align: right;
-
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
 	z-index: 1000;
+	
+	padding: var(--space-50);
+	text-align: right;
+	color: var(--hue-neutral-50);
+
 	visibility: hidden;
 	opacity: 0;
 	transform: scale(0.95);
@@ -134,17 +136,14 @@
 
 
 @media( min-width: 500px )  {
-	/*.main-nav .menu-list li {
-		margin: 0;
+	.menu-toggle {
+		top: var(--space-100);
+		right: var(--space-100);
 	}
 
-	.main-nav .menu-list a {
-		padding: var(--space-min);
+	.main-nav {
+		padding: var(--space-100);
 	}
-
-	.main-nav .menu-list .submenu-label {
-		padding: var(--space-min);
-	}*/
 }
 @media( min-width: 1000px ) {}
 @media( min-width: 1500px ) {}
