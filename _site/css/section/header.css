@@ -26,7 +26,7 @@
 	justify-content: center;
 	align-items: center;
 	gap: var(--space-min);
-	background-color: var(--hue-foreground);
+	background-color: var(--hue-background);
 	border-radius: 50%;
 	transition: transform var(--transition-speed) var(--transition-ease);
 }
@@ -36,7 +36,7 @@
 .menu-toggle .icon-bar {
 	width: var(--space-50);
 	height: 2px;
-	background-color: var(--hue-background);
+	background-color: var(--hue-highlight);
 	border-radius: 1px;
 	transition: transform var(--transition-speed) var(--transition-ease),
 				opacity var(--transition-speed) var(--transition-ease);
