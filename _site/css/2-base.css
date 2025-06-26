@@ -76,7 +76,7 @@ a {
 ul { list-style: disc inside; }
 ol {ist-style: decimal inside; }
 ul, ol, li {
-    margin-left: var(--space-50);
+    margin-left: var(--p);
 }
 
 

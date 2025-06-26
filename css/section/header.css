@@ -1,0 +1,148 @@
+/*
+ * ===========
+ * Header
+ * ===========
+ */
+
+
+
+/*
+ * Menu Toggle Button
+ */
+
+.menu-toggle {
+	--transition-speed: 0.3s;
+	--transition-ease: cubic-bezier(0.42, 0, 0.58, 1);
+
+	cursor: pointer;
+	position: fixed;
+	top: var(--space-50);
+	right: var(--space-50);
+	z-index: 1001;
+	width: 44px;
+	height: 44px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 6px;
+	background-color: var(--hue-foreground);
+	border-radius: 50%;
+	transition: transform var(--transition-speed) var(--transition-ease);
+}
+.menu-toggle * {
+	pointer-events: none;
+}
+.menu-toggle .icon-bar {
+	width: 22px;
+	height: 2px;
+	background-color: var(--hue-background);
+	border-radius: 1px;
+	transition: transform var(--transition-speed) var(--transition-ease),
+				opacity var(--transition-speed) var(--transition-ease);
+}
+
+/* -- Menu Button "X" animation -- */
+#menu-toggle-checkbox:checked ~ .menu-toggle .icon-bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+#menu-toggle-checkbox:checked ~ .menu-toggle .icon-bar:nth-child(2) { opacity: 0; }
+#menu-toggle-checkbox:checked ~ .menu-toggle .icon-bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+
+
+/*
+ * Main Nav
+ */
+
+.main-nav {
+	--transition-speed: 0.3s;
+	--transition-ease: cubic-bezier(0.42, 0, 0.58, 1);
+
+	color: var(--hue-neutral-50);
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	visibility: hidden;
+	opacity: 0;
+	transform: scale(0.95);
+	transition: opacity var(--transition-speed) var(--transition-ease),
+				visibility var(--transition-speed) var(--transition-ease),
+				transform var(--transition-speed) var(--transition-ease);
+	overflow-y: scroll;
+
+	background: color-mix(in srgb, var(--hue-background) 80%, transparent);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+}
+
+#menu-toggle-checkbox:checked ~ .main-nav {
+	visibility: visible;
+	opacity: 1;
+	transform: scale(1);
+}
+
+.main-nav .menu-list {}
+
+.main-nav .menu-list ul,
+.main-nav .menu-list ol,
+.main-nav .menu-list li {
+	list-style: none;
+}
+
+.main-nav .menu-list li {
+	font-size: var(--h6);
+	margin: 0;
+	margin-top: var(--space-25);
+}
+
+.main-nav .menu-list a {
+	display: inline-block;
+	padding: var(--space-25);
+}
+
+.main-nav .menu-list .submenu-label {
+	display: inline-block;
+	cursor: pointer;
+	padding: var(--space-25);
+	font-size: var(--h6);
+}
+.main-nav .menu-list .submenu-label:before {
+	content: "+ ";
+}
+
+.main-nav .menu-list .submenu-checkbox:checked ~ .submenu-label:before {
+	content: "– ";
+}
+
+.main-nav .menu-list .sub-menu {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height var(--transition-speed) var(--transition-ease);
+	font-size: var(--p);
+	font-weight: 400;
+}
+
+.main-nav .menu-list .submenu-checkbox:checked ~ .sub-menu {
+	max-height: 500px;
+}
+
+
+@media( min-width: 500px )  {
+	.main-nav .menu-list li {
+		margin: 0;
+	}
+
+	.main-nav .menu-list a {
+		padding: var(--space-min);
+	}
+
+	.main-nav .menu-list .submenu-label {
+		padding: var(--space-min);
+	}
+}
+@media( min-width: 1000px ) {}
+@media( min-width: 1500px ) {}
+

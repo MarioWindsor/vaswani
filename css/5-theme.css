@@ -45,6 +45,12 @@ body, .body {
 
 
 
+a {
+	color: var(--hue-highlight);
+	text-decoration: none;
+}
+
+
 /*
  * Font Size
  * Applies the fluid font size variables from 0-root.css to any element.

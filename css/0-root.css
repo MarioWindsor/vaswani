@@ -20,9 +20,9 @@
 	/* -- Theme Color -- */
 
 	--hue-background: var(--base-hue-light);
-	--hue-foreground: var(--base-hue-dark);
+	--hue-foreground: #1A202A;
 
-	--hue-highlight: var(--base-hue-blue);
+	--hue-highlight: #00BD4C;
 
 	--hue-neutral-10: #E6E6E7;
 	--hue-neutral-20: #CCCDD0;
