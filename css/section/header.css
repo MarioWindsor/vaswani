@@ -43,9 +43,6 @@
 }
 
 /* -- Menu Button "X" animation -- */
-/*#menu-toggle-checkbox:checked ~ .menu-toggle .icon-bar:nth-child(1) { transform: translateY(var(--space-min)) rotate(45deg); }
-#menu-toggle-checkbox:checked ~ .menu-toggle .icon-bar:nth-child(2) { opacity: 0; }
-#menu-toggle-checkbox:checked ~ .menu-toggle .icon-bar:nth-child(3) { transform: translateY(calc(var(--space-min) * -1)) rotate(-45deg); }*/
 #menu-toggle-checkbox:checked ~ .menu-toggle .icon-bar:nth-child(1) { transform: translateY(calc((var(--space-min) + 2px) * 1)) rotate(45deg); }
 #menu-toggle-checkbox:checked ~ .menu-toggle .icon-bar:nth-child(2) { opacity: 0; }
 #menu-toggle-checkbox:checked ~ .menu-toggle .icon-bar:nth-child(3) { transform: translateY(calc((var(--space-min) + 2px) * -1)) rotate(-45deg); }
@@ -98,9 +95,8 @@
 }
 
 .main-nav .menu-list li {
-	font-size: var(--h6);
+	font-size: var(--h5);
 	margin: 0;
-	/*margin-top: var(--space-min);*/
 }
 
 .main-nav .menu-list a {
@@ -112,7 +108,7 @@
 	display: inline-block;
 	cursor: pointer;
 	padding: var(--space-min);
-	font-size: var(--h6);
+	font-size: var(--h5);
 }
 .main-nav .menu-list .submenu-label:after {
 	content: " + ";
