@@ -160,7 +160,7 @@ a {
  */
 
 /* Light Backgrounds, Dark Text */
-.fill-light { 
+.fill-background { 
 	background-color: var(--hue-background);
 	color: var(--hue-foreground);
 }
@@ -182,7 +182,7 @@ a {
 }
 
 /* Dark Backgrounds, Light Text */
-.fill-dark {
+.fill-foreground {
 	background-color: var(--hue-foreground);
 	color: var(--hue-background);
 }
@@ -255,26 +255,40 @@ a {
  * Shadow dimensions are proportional to the base paragraph font size (--p).
  */
 
-.box-shadow-sm {
-	box-shadow:
-		0 calc(var(--p) * 0.07) calc(var(--p) * 0.14) 0 color-mix(in srgb, var(--base-hue-dark) 8%, transparent),
-		0 calc(var(--p) * 0.07) calc(var(--p) * 0.07) 0 color-mix(in srgb, var(--base-hue-dark) 6%, transparent);
+.box-shadow-small {
+	box-shadow: 
+		0 0 var(--border-width) color-mix(in srgb, var(--hue-foreground) 10%, transparent),
+		0 var(--border-width) calc(var(--space-min)/2) color-mix(in srgb, var(--hue-foreground) 10%, transparent);
 }
 
-.box-shadow, .box-shadow-md {
-	box-shadow:
-		0 calc(var(--p) * 0.28) calc(var(--p) * 0.43) calc(var(--p) * -0.07) color-mix(in srgb, var(--base-hue-dark) 8%, transparent),
-		0 calc(var(--p) * 0.14) calc(var(--p) * 0.28) calc(var(--p) * -0.14) color-mix(in srgb, var(--base-hue-dark) 6%, transparent);
+.box-shadow, .box-shadow-medium {
+	box-shadow: 
+		0 0 var(--border-width)  color-mix(in srgb, var(--hue-foreground) 15%, transparent),
+		0 var(--border-width) calc(var(--space-min)/1) color-mix(in srgb, var(--hue-foreground) 15%, transparent);
 }
 
-.box-shadow-lg {
-	box-shadow:
-		0 calc(var(--p) * 0.7) calc(var(--p) * 1.05) calc(var(--p) * -0.2) color-mix(in srgb, var(--base-hue-dark) 8%, transparent),
-		0 calc(var(--p) * 0.28) calc(var(--p) * 0.43) calc(var(--p) * -0.28) color-mix(in srgb, var(--base-hue-dark) 5%, transparent);
+.box-shadow-large {
+	box-shadow: 
+		0 0 var(--border-width)  color-mix(in srgb, var(--hue-foreground) 20%, transparent),
+		0 var(--border-width) calc(var(--space-min)*2) color-mix(in srgb, var(--hue-foreground) 20%, transparent);
 }
 
-.box-shadow-highlight {
-	box-shadow: 0 0 calc(var(--p) * 0.85) calc(var(--p) * 0.28) color-mix(in srgb, var(--hue-highlight) 20%, transparent);
+.box-shadow-highlight-small {
+	box-shadow: 
+		0 0 var(--border-width) color-mix(in srgb, var(--hue-highlight) 20%, transparent),
+		0 var(--border-width) calc(var(--space-min)/2) color-mix(in srgb, var(--hue-highlight) 20%, transparent);
+}
+
+.box-shadow-highlight, .box-shadow-highlight-medium {
+	box-shadow: 
+		0 0 var(--border-width)  color-mix(in srgb, var(--hue-highlight) 25%, transparent),
+		0 var(--border-width) calc(var(--space-min)/1) color-mix(in srgb, var(--hue-highlight) 25%, transparent);
+}
+
+.box-shadow-highlight-large {
+	box-shadow: 
+		0 0 var(--border-width)  color-mix(in srgb, var(--hue-highlight) 30%, transparent),
+		0 var(--border-width) calc(var(--space-min)*2) color-mix(in srgb, var(--hue-highlight) 30%, transparent);
 }
 
 

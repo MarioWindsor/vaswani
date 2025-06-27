@@ -7,6 +7,19 @@
 
 
 /*
+ * Header Section
+ */
+
+.header-section {}
+.header-section .logo {
+	display: inline-block;
+	width: calc(var(--card)/3);
+}
+
+
+
+
+/*
  * Menu Toggle Button
  */
 
@@ -26,7 +39,11 @@
 	justify-content: center;
 	align-items: center;
 	gap: var(--space-min);
-	background-color: var(--hue-background);
+
+	background: color-mix(in srgb, var(--hue-background) 75%, transparent);
+	backdrop-filter: blur(3px);
+	-webkit-backdrop-filter: blur(3px);
+	
 	border-radius: 50%;
 	transition: transform var(--transition-speed) var(--transition-ease);
 }
@@ -76,8 +93,8 @@
 	overflow-y: scroll;
 
 	background: color-mix(in srgb, var(--hue-background) 80%, transparent);
-	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(7px);
+	-webkit-backdrop-filter: blur(7px);
 }
 
 #menu-toggle-checkbox:checked ~ .main-nav {
@@ -132,13 +149,13 @@
 
 
 @media( min-width: 500px )  {
-	.menu-toggle {
+	/*.menu-toggle {
 		top: var(--space-100);
 		right: var(--space-100);
-	}
+	}*/
 
 	.main-nav {
-		padding: var(--space-100);
+		padding: var(--space-50) var(--space-75);
 	}
 }
 @media( min-width: 1000px ) {}
