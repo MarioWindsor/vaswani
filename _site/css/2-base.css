@@ -27,13 +27,13 @@ html {
 	font-size: 62.5%;
 }
 body {
-	background-color: var(--base-hue-light);
+	background-color: var(--hue-light);
 	font-size: var(--p);
 	line-height: 1.375;
 	font-weight: 400;
 	/* A modern system font stack for better cross-platform rendering. */
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-	color: var(--base-hue-dark);
+	color: var(--hue-dark);
 }
 
 
@@ -65,7 +65,7 @@ label { font-size: var(--label); line-height: 1.5; }
 small { font-size: var(--small); line-height: 1.5; }
 
 a {
-	color: var(--base-hue-blue);
+	color: var(--hue-highlight);
 	text-decoration: underline; /* Makes links obviously clickable by default. */
 }
 
@@ -98,7 +98,7 @@ select {
 	padding: var(--p);
 	font-size: var(--p);
 	line-height: 1.5;
-	border: var(--border-width) solid var(--base-hue-dark);
+	border: var(--border-width) solid var(--hue-dark);
 }
 select {
 	padding: calc((var(--p) / 2) - var(--border-width)) var(--p);
@@ -134,8 +134,8 @@ input[type="button"] {
 	line-height: calc(var(--p) * 3);
 	text-decoration: none;
 	white-space: nowrap;
-	color: var(--base-hue-light);
-	background-color: var(--base-hue-blue);
+	color: var(--hue-light);
+	background-color: var(--hue-highlight);
 	cursor: pointer;
 }
 .button:hover, button:hover {
@@ -148,7 +148,7 @@ input[type="button"] {
 
 hr {
 	border: 0;
-	border-top: var(--border-width) solid var(--base-hue-dark);
+	border-top: var(--border-width) solid var(--hue-dark);
 }
 
 img {
@@ -163,5 +163,5 @@ table {
 th, td {
 	padding: var(--p) var(--p);
 	text-align: left;
-	border-bottom: var(--border-width) solid var(--base-hue-dark);
+	border-bottom: var(--border-width) solid var(--hue-dark);
 }

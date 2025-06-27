@@ -31,6 +31,7 @@ html {
 
 body, .body {
 	font-family: "Poppins", Arial, sans-serif;
+	color: var(--hue-neutral-70);
 }
 
 
@@ -46,7 +47,6 @@ body, .body {
 
 
 a {
-	color: var(--hue-highlight);
 	text-decoration: none;
 }
 
@@ -136,8 +136,8 @@ a {
  * Applies a specific theme color to the text.
  */
 
-.text-light { color: var(--hue-background); }
-.text-dark { color: var(--hue-foreground); }
+.text-light { color: var(--hue-light); }
+.text-dark { color: var(--hue-dark); }
 .text-highlight { color: var(--hue-highlight); }
 .text-error { color: var(--hue-error); }
 .text-success { color: var(--hue-success); }
@@ -160,67 +160,67 @@ a {
  */
 
 /* Light Backgrounds, Dark Text */
-.fill-background { 
-	background-color: var(--hue-background);
-	color: var(--hue-foreground);
+.fill-light { 
+	background-color: var(--hue-light);
+	color: var(--hue-dark);
 }
 .fill-neutral-10 {
 	background-color: var(--hue-neutral-10);
-	color: var(--hue-foreground);
+	color: var(--hue-dark);
 }
 .fill-neutral-20 {
 	background-color: var(--hue-neutral-20);
-	color: var(--hue-foreground);
+	color: var(--hue-dark);
 }
 .fill-neutral-30 {
 	background-color: var(--hue-neutral-30);
-	color: var(--hue-foreground);
+	color: var(--hue-dark);
 }
 .fill-warning {
 	background-color: var(--hue-warning);
-	color: var(--hue-foreground);
+	color: var(--hue-dark);
 }
 
 /* Dark Backgrounds, Light Text */
-.fill-foreground {
-	background-color: var(--hue-foreground);
-	color: var(--hue-background);
+.fill-dark {
+	background-color: var(--hue-dark);
+	color: var(--hue-dark);
 }
 .fill-highlight {
 	background-color: var(--hue-highlight);
-	color: var(--hue-background);
+	color: var(--hue-dark);
 }
 .fill-neutral-40 {
 	background-color: var(--hue-neutral-40);
-	color: var(--hue-background);
+	color: var(--hue-dark);
 }
 .fill-neutral-50 {
 	background-color: var(--hue-neutral-50);
-	color: var(--hue-background);
+	color: var(--hue-dark);
 }
 .fill-neutral-60 {
 	background-color: var(--hue-neutral-60);
-	color: var(--hue-background);
+	color: var(--hue-dark);
 }
 .fill-neutral-70 {
 	background-color: var(--hue-neutral-70);
-	color: var(--hue-background);
+	color: var(--hue-dark);
 }
 .fill-neutral-80 {
 	background-color: var(--hue-neutral-80);
-	color: var(--hue-background);
+	color: var(--hue-dark);
 }
 .fill-neutral-90 {
 	background-color: var(--hue-neutral-90);
-	color: var(--hue-background);
+	color: var(--hue-dark);
 }
 .fill-error {
 	background-color: var(--hue-error);
-	color: var(--hue-background);
+	color: var(--hue-dark);
 }
 .fill-success {
 	background-color: var(--hue-success);
-	color: var(--hue-background);
+	color: var(--hue-dark);
 }
 
 
@@ -257,20 +257,20 @@ a {
 
 .box-shadow-small {
 	box-shadow: 
-		0 0 var(--border-width) color-mix(in srgb, var(--hue-foreground) 10%, transparent),
-		0 var(--border-width) calc(var(--space-min)/2) color-mix(in srgb, var(--hue-foreground) 10%, transparent);
+		0 0 var(--border-width) color-mix(in srgb, var(--hue-dark) 10%, transparent),
+		0 var(--border-width) calc(var(--space-min)/2) color-mix(in srgb, var(--hue-dark) 10%, transparent);
 }
 
 .box-shadow, .box-shadow-medium {
 	box-shadow: 
-		0 0 var(--border-width)  color-mix(in srgb, var(--hue-foreground) 15%, transparent),
-		0 var(--border-width) calc(var(--space-min)/1) color-mix(in srgb, var(--hue-foreground) 15%, transparent);
+		0 0 var(--border-width)  color-mix(in srgb, var(--hue-dark) 15%, transparent),
+		0 var(--border-width) calc(var(--space-min)/1) color-mix(in srgb, var(--hue-dark) 15%, transparent);
 }
 
 .box-shadow-large {
 	box-shadow: 
-		0 0 var(--border-width)  color-mix(in srgb, var(--hue-foreground) 20%, transparent),
-		0 var(--border-width) calc(var(--space-min)*2) color-mix(in srgb, var(--hue-foreground) 20%, transparent);
+		0 0 var(--border-width)  color-mix(in srgb, var(--hue-dark) 20%, transparent),
+		0 var(--border-width) calc(var(--space-min)*2) color-mix(in srgb, var(--hue-dark) 20%, transparent);
 }
 
 .box-shadow-highlight-small {
@@ -299,10 +299,10 @@ a {
  */
 
 .box-border-dark {
-	box-shadow: inset 0 0 0 var(--border-width) var(--hue-foreground);
+	box-shadow: inset 0 0 0 var(--border-width) var(--hue-dark);
 }
 .box-border-light {
-	box-shadow: inset 0 0 0 var(--border-width) var(--hue-background);
+	box-shadow: inset 0 0 0 var(--border-width) var(--hue-dark);
 }
 .box-border-highlight {
 	box-shadow: inset 0 0 0 var(--border-width) var(--hue-highlight);

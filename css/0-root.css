@@ -11,17 +11,10 @@
 	 * COLORS
 	 */
 
-	/* -- Base Color -- */
-
-	--base-hue-light: #FFFFFF;
-	--base-hue-dark: #000712;
-	--base-hue-blue: #0175FF;
-
 	/* -- Theme Color -- */
 
-	--hue-background: var(--base-hue-light);
-	--hue-foreground: #1A202A;
-
+	--hue-light: #FFFFFF;
+	--hue-dark: #1A202A;
 	--hue-highlight: #00BD4C;
 
 	--hue-neutral-10: #E6E6E7;
