@@ -1,0 +1,79 @@
+/*
+ *
+ *	Carousel
+ *
+ */
+
+.carousel {
+	width: 100%;
+	position: relative;
+	z-index: 1;
+}
+
+.carousel .carousel-list {
+	position: relative;
+	z-index: 1;
+	display: grid;
+	grid-gap: var(--space-50);
+	grid-auto-flow: column;
+	grid-auto-columns: var(--card);
+	white-space: nowrap;
+	overflow-x: scroll; /* needs to be 'scroll' not 'auto' */
+	font-size: 0;
+	-webkit-overflow-scrolling: touch;
+	padding: var(--space-50) var(--space-100);
+	scroll-snap-type: x mandatory;
+	scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.carousel .carousel-list .carousel-list-item {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	white-space: normal;
+	scroll-snap-align: center;
+}
+
+
+@media( min-width: 500px )  {
+	.carousel .carousel-list {
+		grid-auto-columns: calc(var(--card) - var(--space-25));
+	}
+}
+@media( min-width: 1000px ) {
+	.carousel .carousel-list {
+		grid-auto-columns: calc(var(--card) - (var(--space-100) / 3) );
+		padding: var(--space-50) var(--space-150);
+	}
+}
+@media( min-width: 1500px ) {
+	.carousel .carousel-list {
+		grid-auto-columns: calc(var(--card) - (var(--space-100) / 2.666) ); /* dont ask why this number - i did the math */
+		padding: var(--space-50) var(--space-200);
+	}
+}
+
+
+
+
+/* -- Controls -- */
+.carousel .carousel-controls {
+	pointer-events: none;
+/*	position: absolute;*/
+/*	z-index: 2;*/
+	width: 100%;
+}
+
+.carousel .carousel-controls .scroll-button {
+	pointer-events: all;
+/*	padding: 0 var(--space-25);*/
+	padding: var(--space-50);
+/*	transform: translateY(-100%);*/
+	transform: translateY(calc(-1 * var(--space-25)));
+	cursor: pointer;
+}
+
+.carousel .carousel-controls .scroll-button * {
+	pointer-events: none;
+}

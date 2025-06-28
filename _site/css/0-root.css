@@ -14,18 +14,19 @@
 	/* -- Theme Color -- */
 
 	--hue-light: #FFFFFF;
-	--hue-dark: #1A202A;
-	--hue-highlight: #00BD4C;
+	--hue-dark: #19253E;
+	--hue-primary: #00BD4C;
+	--hue-yellow: #00BD4C;
 
-	--hue-neutral-10: #E6E6E7;
-	--hue-neutral-20: #CCCDD0;
-	--hue-neutral-30: #B3B5B8;
-	--hue-neutral-40: #999CA0;
-	--hue-neutral-50: #808389;
-	--hue-neutral-60: #666A71;
-	--hue-neutral-70: #4D5159;
-	--hue-neutral-80: #333941;
-	--hue-neutral-90: #1A202A;
+	--hue-neutral-10: #E8E9EC;
+	--hue-neutral-20: #D1D3D8;
+	--hue-neutral-30: #BABEC5;
+	--hue-neutral-40: #A3A8B2;
+	--hue-neutral-50: #8C929F;
+	--hue-neutral-60: #757C8B;
+	--hue-neutral-70: #5E6678;
+	--hue-neutral-80: #475165;
+	--hue-neutral-90: #303B51;
 
 	--hue-error: red;
 	--hue-warning: orange;

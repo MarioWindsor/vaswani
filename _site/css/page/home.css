@@ -4,7 +4,47 @@
  * ===========
  */
 
+/* -- CSR Excerpt Section -- */
 
-@media( min-width: 500px )  {}
-@media( min-width: 1000px ) {}
-@media( min-width: 1500px ) {}
+.csr-excerpt-section { position: relative; }
+.csr-excerpt-section .dotmatrix { display: none; }
+
+@media( min-width: 1000px ) {
+	.csr-excerpt-section .heading {
+		font-size: var(--h1);
+	}
+
+	.csr-excerpt-section .dotmatrix {
+		display: block;
+		position: absolute;
+		z-index: -1;
+		bottom: 0;
+		right: 50%;
+		width: calc(var(--card)/1.5);
+		transform: translateX(var(--space-200));
+		opacity: 66.666%;
+	}
+}
+
+/* -- NRI Excerpt Section -- */
+
+
+.nri-excerpt-section { position: relative; }
+.nri-excerpt-section .dotmatrix { display: none; }
+
+@media( min-width: 1000px ) {
+	.nri-excerpt-section .heading {
+		font-size: var(--h1);
+	}
+
+	.nri-excerpt-section .dotmatrix {
+		display: block;
+		position: absolute;
+		z-index: -1;
+		bottom: var(--space-175);
+		left: 50%;
+		width: calc(var(--card)/1.5);
+		transform: translateX(var(--card));
+		opacity: 66.666%;
+	}
+}

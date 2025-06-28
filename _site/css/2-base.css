@@ -11,7 +11,7 @@
  */
 
 ::selection {
-	background: color-mix(in srgb, var(--hue-highlight) 50%, transparent);
+	background: color-mix(in srgb, var(--hue-primary) 50%, transparent);
 	text-shadow: none;
 }
 
@@ -44,7 +44,7 @@ body {
  */
 
 h1, h2, h3, h4, h5, h6 {
-	font-weight: 700;
+	font-weight: inherit;
 }
 
 /*
@@ -65,7 +65,7 @@ label { font-size: var(--label); line-height: 1.5; }
 small { font-size: var(--small); line-height: 1.5; }
 
 a {
-	color: var(--hue-highlight);
+	color: var(--hue-primary);
 	text-decoration: underline; /* Makes links obviously clickable by default. */
 }
 
@@ -135,7 +135,7 @@ input[type="button"] {
 	text-decoration: none;
 	white-space: nowrap;
 	color: var(--hue-light);
-	background-color: var(--hue-highlight);
+	background-color: var(--hue-primary);
 	cursor: pointer;
 }
 .button:hover, button:hover {

@@ -40,7 +40,7 @@
 	align-items: center;
 	gap: var(--space-min);
 
-	background: color-mix(in srgb, var(--hue-background) 75%, transparent);
+	background: color-mix(in srgb, var(--hue-light) 50%, transparent);
 	backdrop-filter: blur(3px);
 	-webkit-backdrop-filter: blur(3px);
 	
@@ -53,7 +53,7 @@
 .menu-toggle .icon-bar {
 	width: var(--space-50);
 	height: 2px;
-	background-color: var(--hue-highlight);
+	background-color: var(--hue-primary);
 	border-radius: 1px;
 	transition: transform var(--transition-speed) var(--transition-ease),
 				opacity var(--transition-speed) var(--transition-ease);
@@ -82,7 +82,7 @@
 	
 	padding: var(--space-50);
 	text-align: right;
-	color: var(--hue-neutral-50);
+	color: var(--hue-neutral-70);
 
 	visibility: hidden;
 	opacity: 0;
@@ -92,7 +92,7 @@
 				transform var(--transition-speed) var(--transition-ease);
 	overflow-y: scroll;
 
-	background: color-mix(in srgb, var(--hue-background) 80%, transparent);
+	background: color-mix(in srgb, var(--hue-light) 75%, transparent);
 	backdrop-filter: blur(7px);
 	-webkit-backdrop-filter: blur(7px);
 }
