@@ -32,6 +32,7 @@ html {
 body, .body {
 	font-family: "Poppins", Arial, sans-serif;
 	color: var(--hue-neutral-70);
+	font-weight: 300;
 }
 
 
@@ -77,8 +78,9 @@ a {
 .w-200 { font-weight: 200; }
 .w-300 { font-weight: 300; }
 .w-400 { font-weight: 400; }
-.w-600 { font-weight: 600; }
+.w-500 { font-weight: 500; }
 .strong,
+.w-600 { font-weight: 600; }
 .w-700 { font-weight: 700; }
 .w-800 { font-weight: 800; }
 .w-900 { font-weight: 900; }
@@ -139,6 +141,7 @@ a {
 .text-light { color: var(--hue-light); }
 .text-dark { color: var(--hue-dark); }
 .text-primary { color: var(--hue-primary); }
+.text-secondary { color: var(--hue-secondary); }
 .text-error { color: var(--hue-error); }
 .text-success { color: var(--hue-success); }
 .text-warning { color: var(--hue-warning); }
@@ -162,6 +165,10 @@ a {
 /* Light Backgrounds, Dark Text */
 .fill-light { 
 	background-color: var(--hue-light);
+	color: var(--hue-dark);
+}
+.fill-secondary {
+	background-color: var(--hue-secondary);
 	color: var(--hue-dark);
 }
 .fill-neutral-10 {
@@ -288,6 +295,12 @@ a {
 	box-shadow: 
 		0 0 var(--border-width)  color-mix(in srgb, var(--hue-dark) 20%, transparent),
 		0 var(--border-width) calc(var(--space-min)*2) color-mix(in srgb, var(--hue-dark) 20%, transparent);
+}
+
+.box-shadow-inset {
+	box-shadow: 
+		inset 0 0 var(--border-width)  color-mix(in srgb, var(--hue-dark) 15%, transparent),
+		inset 0 var(--border-width) calc(var(--space-min)/1) color-mix(in srgb, var(--hue-dark) 15%, transparent);
 }
 
 .box-shadow-primary-small {

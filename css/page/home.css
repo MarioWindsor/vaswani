@@ -4,16 +4,51 @@
  * ===========
  */
 
-/* -- CSR Excerpt Section -- */
 
+
+/* -- Section Heading -- */
+.section-heading {
+	line-height: 1;
+}
+
+
+
+/* -- Project Listing Section -- */
+.project-listing-section.active {}
+.project-listing-section.active .projects .project {
+	border-bottom: var(--border-width) dashed var(--hue-neutral-20);
+}
+.project-listing-section.active .projects .project:last-child {
+	border-bottom: 0;
+}
+
+.project-listing-section.active .project-meta {
+	margin-top: var(--space-25);
+	line-height: 2;
+}
+
+@media( min-width: 500px ) {
+	.project-listing-section.active .project-meta {
+		margin-top: 0;
+		text-align: right;
+	}
+}
+@media( min-width: 1000px ) {
+	.project-listing-section.active .project-title .name {
+		font-size: var(--h3);
+	}
+	.project-listing-section.active .project-title .heading {
+		font-size: var(--h5);
+	}
+}
+
+
+
+/* -- CSR Excerpt Section -- */
 .csr-excerpt-section { position: relative; }
 .csr-excerpt-section .dotmatrix { display: none; }
 
 @media( min-width: 1000px ) {
-	.csr-excerpt-section .heading {
-		font-size: var(--h1);
-	}
-
 	.csr-excerpt-section .dotmatrix {
 		display: block;
 		position: absolute;
@@ -26,17 +61,13 @@
 	}
 }
 
+
+
 /* -- NRI Excerpt Section -- */
-
-
 .nri-excerpt-section { position: relative; }
 .nri-excerpt-section .dotmatrix { display: none; }
 
 @media( min-width: 1000px ) {
-	.nri-excerpt-section .heading {
-		font-size: var(--h1);
-	}
-
 	.nri-excerpt-section .dotmatrix {
 		display: block;
 		position: absolute;

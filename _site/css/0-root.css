@@ -16,7 +16,7 @@
 	--hue-light: #FFFFFF;
 	--hue-dark: #19253E;
 	--hue-primary: #00BD4C;
-	--hue-yellow: #00BD4C;
+	--hue-secondary: #FFCB0A;
 
 	--hue-neutral-10: #E8E9EC;
 	--hue-neutral-20: #D1D3D8;
@@ -55,7 +55,7 @@
 
 	/* -- Spacing System -- */
 
-	--space-100: calc(var(--card)/6);
+	--space-100: calc(var(--card)/8);
 
 	/* Fractional sizes */
 	
@@ -82,7 +82,7 @@
 	--card-font-factor: 30; 
 	--font-unit: calc(var(--card) / var(--card-font-factor));
 
-	--font-scale: 1.2; /* The base ratio for our type scale */
+	--font-scale: 1.25; /* The base ratio for our type scale */
 
 	--h1: calc(pow(var(--font-scale), 7) * var(--font-unit));
 	--h2: calc(pow(var(--font-scale), 6) * var(--font-unit));
@@ -102,6 +102,14 @@
 	 * but is clamped between 1px and 3px.
 	 */
 	--border-width: calc(var(--p) * 0.1);
+
+
+	/*
+	 * Transition Timing
+	 */
+
+	--transition-speed: 0.3s;
+	--transition-ease: cubic-bezier(0.42, 0, 0.58, 1);
 }
 
 @media( min-width: 500px ) {
