@@ -7,7 +7,6 @@
 /* -- Scroll Controls -- */
 
 document.addEventListener("DOMContentLoaded", function() {
-	// console.log("Carousel Ready")
 	const scollButtons = document.querySelectorAll('.scroll-button');
 	scollButtons.forEach((scrollButton) => {
 		scrollButton.addEventListener('click', (e) => {
@@ -18,13 +17,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 			// var scrOffsetPX = window.getComputedStyle(document.documentElement).getPropertyValue('--container-width');
 
-			const viewWidth = document.documentElement; // Because css variables based on non pixel values like vw , % . etc... isn't getting computed
+			const viewWidth = document.documentElement; // READ THIS : Because css variables based on non pixel values like vw , % . etc... isn't getting computed
 			const viewWidthInPixels = viewWidth.offsetWidth;
 
 			scrOffsetPX = ( viewWidthInPixels / 14 ) * 12;
 
-			var scrOffset = parseInt(scrOffsetPX) * 0.8;
-			// console.log(scrOffset);
+			var scrOffset = parseInt(scrOffsetPX) * 0.666;
 
 			carList.style.scrollBehavior = "smooth";
 
@@ -33,9 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			} else if ( dir == "right") {
 				carList.scrollLeft += scrOffset;
 			}
-			
 		});
 	});
-
 });
 

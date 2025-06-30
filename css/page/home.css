@@ -10,35 +10,100 @@
 .section-heading {
 	line-height: 1;
 }
+.section-label {
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: calc(var(--space-25)/15);
+	line-height: 1.75;
+}
 
 
 
-/* -- Project Listing Section -- */
-.project-listing-section.active {}
-.project-listing-section.active .projects .project {
+/* -- Project Listing Section (.ongoing & .completed) -- */
+.project-listing-section.ongoing {}
+.project-listing-section.ongoing .projects .project {
 	border-bottom: var(--border-width) dashed var(--hue-neutral-20);
 }
-.project-listing-section.active .projects .project:last-child {
+.project-listing-section.ongoing .projects .project:last-child {
 	border-bottom: 0;
 }
 
-.project-listing-section.active .project-meta {
+.project-listing-section.ongoing .project-meta {
 	margin-top: var(--space-25);
 	line-height: 2;
 }
+.project-listing-section .project-meta .metadata {
+	display: flex;
+	align-items: center;
+	gap: calc(var(--small)/2);
+}
 
 @media( min-width: 500px ) {
-	.project-listing-section.active .project-meta {
+	.project-listing-section.ongoing .project-meta {
 		margin-top: 0;
 		text-align: right;
 	}
+	.project-listing-section.ongoing .project-meta .metadata {
+		flex-direction: row-reverse;
+	}
 }
 @media( min-width: 1000px ) {
-	.project-listing-section.active .project-title .name {
+	.project-listing-section.ongoing .project-title .name {
 		font-size: var(--h3);
 	}
-	.project-listing-section.active .project-title .heading {
+	.project-listing-section.ongoing .project-title .heading {
 		font-size: var(--h5);
+	}
+}
+
+
+
+/* -- Contact Form Section -- */
+.contact-form-section {}
+
+.contact-form-section .form {
+	display: grid;
+	gap: var(--small);
+	grid-template-columns: repeat(1, 1fr);
+}
+
+.contact-form-section .dotmatrix { display: none; }
+
+@media( min-width: 500px ) {
+	.contact-form-section .or-message {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		padding-bottom: var(--space-100);
+	}
+
+	.contact-form-section .dotmatrix {
+		display: block;
+		position: absolute;
+		z-index: -1;
+		bottom: var(--space-200);
+		left: 25%;
+		width: calc(var(--card)/1.5);
+		opacity: 66.666%;
+		transform: translate(-50%, -75%);
+	}
+}
+@media( min-width: 1000px ) {
+	.contact-form-section .form {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.contact-form-section .form .form-input.span-row {
+		grid-column: 1 / -1;
+	}
+
+	.contact-form-section .dotmatrix {
+		transform: translate(-25%, -25%);
+	}
+}
+@media( min-width: 1500px ) {
+	.contact-form-section .dotmatrix {
+		left: calc(25% + (var(--column-unit)/2));
 	}
 }
 
@@ -78,4 +143,83 @@
 		transform: translateX(var(--card));
 		opacity: 66.666%;
 	}
+}
+
+
+
+
+/* -- Bank Financing Section -- */
+.bank-financing-section {}
+.bank-financing-section .bank-grid {
+	position: relative;
+	overflow: clip;
+}
+
+.bank-financing-section .bank-grid:before ,
+.bank-financing-section .bank-grid:after {
+	display: block;
+	content: '';
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	bottom: 0;
+	width: var(--space-200);
+	background: linear-gradient(to right, var(--hue-light), transparent);
+}
+
+.bank-financing-section .bank-grid:before {
+	left: 0;
+}
+.bank-financing-section .bank-grid:after {
+	right: 0;
+	transform: rotate(180deg);
+}
+
+.bank-financing-section .bank-grid-track {
+	display: flex;
+	gap: var(--space-50);
+	width: max-content;
+	height: var(--space-50);
+	animation: marquee-move-text 10s linear infinite forwards;
+}
+
+.bank-financing-section .bank-grid .bank-link {
+	filter: grayscale(1);
+	transition: var(--transition-speed) var(--transition-ease);
+}
+
+.bank-financing-section .bank-grid .bank-link:hover {
+	filter: grayscale(0);
+}
+
+@keyframes marquee-move-text {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media( min-width: 1000px ) {
+	.bank-financing-section .heading {
+		font-size: var(--h4);
+	}
+
+	.bank-financing-section .bank-grid-track {
+		gap: var(--space-75);
+		height: var(--space-75);
+	}
+}
+
+
+
+/* -- Join Newsletter Section -- */
+
+.join-newsletter-section { position: relative; }
+.join-newsletter-section .join-newsletter {
+	position: absolute;
+	z-index: 2;
+	bottom: var(--space-200);
+	left: 0;
+	width: 100%;
+	height: auto;
+	background: linear-gradient(to top, var(--hue-dark), transparent);
 }

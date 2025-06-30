@@ -9,4 +9,5 @@
 .card {
 	background: var(--hue-light);
 	overflow: hidden;
+	border-radius: var(--space-25);
 }

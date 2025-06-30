@@ -79,7 +79,7 @@ a {
 .w-300 { font-weight: 300; }
 .w-400 { font-weight: 400; }
 .w-500 { font-weight: 500; }
-.strong,
+strong, .strong,
 .w-600 { font-weight: 600; }
 .w-700 { font-weight: 700; }
 .w-800 { font-weight: 800; }
@@ -91,7 +91,7 @@ a {
  * Font Style
  */
 
-.em { font-style: italic; }
+em, .em { font-style: italic; }
 
 
 
@@ -248,6 +248,35 @@ a {
 	text-transform: uppercase;
 }
 
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+input[type="date"],
+textarea,
+select {
+	font-size: var(--p);
+	border-color: var(--hue-neutral-20);
+	border-radius: var(--space-min);
+}
+
+.form {}
+.form-input {}
+.input-label {
+	font-size: var(--small);
+	font-weight: 500;
+	text-transform: uppercase;
+}
+.input-field {}
+
+.form-input:focus-within .input-label { color: var(--hue-primary); }
+.form-input:focus-within .input-field {
+	color: var(--hue-primary);
+	border-color: var(--hue-secondary);
+}
 
 
 

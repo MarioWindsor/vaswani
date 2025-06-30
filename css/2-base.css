@@ -13,6 +13,7 @@
 ::selection {
 	background: color-mix(in srgb, var(--hue-primary) 50%, transparent);
 	text-shadow: none;
+	color: var(--hue-dark);
 }
 
 
